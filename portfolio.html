@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Work | ProLaunch Creative Agency</title>
+  <meta name="description" content="See the websites, landing pages, and digital assets ProLaunch has built for entrepreneurs and businesses."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/portfolio.css"/>
+  <link rel="icon" type="image/png" href="images/prolaunch.png"/>
+  <script>(function(){var b=localStorage.getItem('prolaunch-brand');if(!b){var h=(location.hostname||'').toLowerCase();b=h.indexOf('glamlaunch.co')!==-1?'glamlaunch':'prolaunch';}if(b==='glamlaunch')document.documentElement.dataset.brand=b;})();</script>
+</head>
+<body>
+
+<!-- Brand Tabs -->
+<div class="brand-tabs">
+  <button class="brand-tab brand-tab--pro" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='prolaunch')toggleBrand()">PROLAUNCH</button>
+  <button class="brand-tab brand-tab--glam" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='glamlaunch')toggleBrand()">GLAMLAUNCH</button>
+</div>
+
+<div id="page-loader" role="status" aria-label="Loading"><img src="prolaunch.png" alt="" class="loader-logo pro-logo" aria-hidden="true"/>
+  <img src="GlamLaunch-Logo-white.png" alt="" class="loader-logo glam-logo" aria-hidden="true"/><div class="loader-bar"></div></div>
+<a href="contact.html" class="float-book" aria-label="Book a call">Book a Call</a>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Home">
+    <img src="prolaunch.png" alt="ProLaunch" class="nav-logo-img pro-logo"/>
+    <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="nav-logo-img glam-logo"/>
+  </a>
+  <div class="brand-toggle">
+    <span class="brand-toggle-dot">&middot;</span>
+    <button class="brand-toggle-btn" aria-label="Switch brand">GlamLaunch</button>
+  </div>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="services.html" class="nav-link">Services</a></li>
+    <li class="nav-item has-mega">
+      <a href="portfolio.html" class="nav-link active">Latest Work</a>
+      <div class="mega-menu">
+        <div class="mega-menu-inner">
+          <div class="mega-menu-links">
+            <a href="portfolio.html">All Projects</a>
+            <a href="portfolio.html#websites">Websites</a>
+            <a href="portfolio.html#landing-pages">Landing Pages</a>
+            <a href="portfolio.html#social">Social Media</a>
+            <a href="portfolio.html#avatars">Marketing Campaigns</a>
+          </div>
+          <div class="mega-menu-projects">
+            <a href="melanu.html" class="mega-project">
+              <img src="images/melanu/hero.png" alt="Melanu Skin Care"/>
+              <span class="mega-project-label">Melanu Skin Care</span>
+            </a>
+            <a href="loud-women-lead.html" class="mega-project">
+              <img src="images/lwl/hero.png" alt="Loud Women Lead"/>
+              <span class="mega-project-label">Loud Women Lead</span>
+            </a>
+            <a href="anchors-of-healing.html" class="mega-project">
+              <img src="images/aoh/hero.png" alt="Anchors of Healing"/>
+              <span class="mega-project-label">Anchors of Healing</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+  <a href="contact.html" class="nav-cta-btn">Book a Call</a>
+  <div class="nav-icons">
+    <button class="nav-icon" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+  </div>
+  </div>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-bg" id="searchOverlayBg"></div>
+  <div class="search-modal">
+    <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-inner">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search ProLaunch..." autocomplete="off"/>
+      <div class="search-suggestions" id="searchSuggestions">
+        <span class="search-suggestion-label">Quick Links</span>
+        <a href="services.html" class="search-suggestion">Services</a>
+        <a href="services.html#websites" class="search-suggestion">Custom Websites</a>
+        <a href="services.html#ai-avatars" class="search-suggestion">Marketing Campaigns</a>
+        <a href="services.html#app-dev" class="search-suggestion">App Development</a>
+        <a href="portfolio.html" class="search-suggestion">Latest Work</a>
+        <a href="contact.html" class="search-suggestion">Contact Us</a>
+        <a href="about.html" class="search-suggestion">About ProLaunch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <button class="mobile-brand-toggle">Switch to GlamLaunch</button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Latest Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="mobile-book-link">Book a Call &rarr;</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow reveal">Our Work</span>
+    <h1 class="reveal delay-1"><span data-brand-key="portfolio-hero-heading-1">Projects That</span> <em data-brand-key="portfolio-hero-heading-em">Perform</em></h1>
+    <p class="reveal delay-2" data-brand-key="portfolio-hero-sub">Real results for real businesses. Here's what we've built.</p>
+  </div>
+</section>
+
+<section class="section section--dark portfolio-section">
+  <div class="container">
+    <div class="portfolio-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="websites">Websites</button>
+      <button class="filter-btn" data-filter="landing-pages">Landing Pages</button>
+      <button class="filter-btn" data-filter="social">Social Media</button>
+      <button class="filter-btn" data-filter="avatars">Marketing Campaigns</button>
+    </div>
+
+    <div class="portfolio-grid">
+      <a href="melanu.html" class="portfolio-card reveal" data-category="websites">
+        <div class="portfolio-card-img">
+          <img src="images/melanu/hero.png" alt="Melanu Skin Care" loading="lazy"/>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-tag">Website</span>
+            <h4>Melanu Skin Care</h4>
+            <p>Shopify development, videography and lifestyle photography for luxury skincare line.</p>
+          </div>
+        </div>
+      </a>
+      <a href="loud-women-lead.html" class="portfolio-card reveal delay-1" data-category="websites">
+        <div class="portfolio-card-img">
+          <img src="images/lwl/hero.png" alt="Loud Women Lead" loading="lazy"/>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-tag">Website</span>
+            <h4>Loud Women Lead</h4>
+            <p>Website development and brand repositioning for women entrepreneur community.</p>
+          </div>
+        </div>
+      </a>
+      <a href="anchors-of-healing.html" class="portfolio-card reveal delay-2" data-category="websites">
+        <div class="portfolio-card-img">
+          <img src="images/aoh/hero.png" alt="Anchors of Healing" loading="lazy"/>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-tag">Website</span>
+            <h4>Anchors of Healing</h4>
+            <p>Squarespace website development for therapist practice.</p>
+          </div>
+        </div>
+      </a>
+      <a href="melanu.html" class="portfolio-card reveal delay-3" data-category="social">
+        <div class="portfolio-card-img">
+          <img src="images/melanu/brand.png" alt="Melanu Social" loading="lazy"/>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-tag">Social Media</span>
+            <h4>Melanu Skin Care</h4>
+            <p>Social media content creation and lifestyle photography.</p>
+          </div>
+        </div>
+      </a>
+      <a href="anchors-of-healing.html" class="portfolio-card reveal delay-1" data-category="websites">
+        <div class="portfolio-card-img">
+          <img src="images/aoh/showcase.png" alt="Anchors of Healing" loading="lazy"/>
+          <div class="portfolio-card-overlay">
+            <span class="portfolio-card-tag">Website</span>
+            <h4>Anchors of Healing</h4>
+            <p>Moodboard design and SEO optimization for therapy practice.</p>
+          </div>
+        </div>
+      </a>
+      <div class="portfolio-empty" id="portfolioEmpty" hidden>
+        <p>New projects coming soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 100px 24px;
+    color: rgba(255,255,255,0.55);
+    font-family: 'Noto Serif Display', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    letter-spacing: 0.01em;
+  }
+  [data-brand="glamlaunch"] .portfolio-empty { color: rgba(13,13,13,0.5); }
+</style>
+
+<section class="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Want Results Like <em>These?</em></h2>
+      <p>Let's talk about what ProLaunch can build for your business.</p>
+      <a href="contact.html" class="btn-primary">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+      <img src="prolaunch.png" alt="ProLaunch" class="footer-logo-img pro-logo"/>
+      <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="footer-logo-img glam-logo"/>
+    </a>
+    <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">LI</a></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch, a ProLaunch company. All rights reserved.</p></div>
+</footer>
+<script src="js/brand-content.js"></script>
+<script src="js/main.js"></script>
+<script>
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.portfolio-card');
+const emptyState = document.getElementById('portfolioEmpty');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    let visible = 0;
+    cards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    if (emptyState) emptyState.hidden = visible > 0;
+  });
+});
+</script>
+</body>
+</html>

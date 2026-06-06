@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | ProLaunch Creative Agency</title>
+  <meta name="description" content="Custom websites, landing pages, social media content and management, marketing campaigns — ProLaunch offers everything you need to launch and grow your business online."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/services.css"/>
+  <link rel="icon" type="image/png" href="images/prolaunch.png"/>
+  <script>(function(){var b=localStorage.getItem('prolaunch-brand');if(!b){var h=(location.hostname||'').toLowerCase();b=h.indexOf('glamlaunch.co')!==-1?'glamlaunch':'prolaunch';}if(b==='glamlaunch')document.documentElement.dataset.brand=b;})();</script>
+</head>
+<body>
+
+<!-- Brand Tabs -->
+<div class="brand-tabs">
+  <button class="brand-tab brand-tab--pro" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='prolaunch')toggleBrand()">PROLAUNCH</button>
+  <button class="brand-tab brand-tab--glam" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='glamlaunch')toggleBrand()">GLAMLAUNCH</button>
+</div>
+
+<div id="page-loader" role="status" aria-label="Loading"><img src="prolaunch.png" alt="" class="loader-logo pro-logo" aria-hidden="true"/>
+  <img src="GlamLaunch-Logo-white.png" alt="" class="loader-logo glam-logo" aria-hidden="true"/><div class="loader-bar"></div></div>
+<a href="contact.html" class="float-book" aria-label="Book a call">Book a Call</a>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Home">
+    <img src="prolaunch.png" alt="ProLaunch" class="nav-logo-img pro-logo"/>
+    <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="nav-logo-img glam-logo"/>
+  </a>
+  <div class="brand-toggle">
+    <span class="brand-toggle-dot">&middot;</span>
+    <button class="brand-toggle-btn" aria-label="Switch brand">GlamLaunch</button>
+  </div>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="services.html" class="nav-link active">Services</a></li>
+    <li class="nav-item has-mega">
+      <a href="portfolio.html" class="nav-link">Latest Work</a>
+      <div class="mega-menu">
+        <div class="mega-menu-inner">
+          <div class="mega-menu-links">
+            <a href="portfolio.html">All Projects</a>
+            <a href="portfolio.html#websites">Websites</a>
+            <a href="portfolio.html#landing-pages">Landing Pages</a>
+            <a href="portfolio.html#social">Social Media</a>
+            <a href="portfolio.html#avatars">Marketing Campaigns</a>
+          </div>
+          <div class="mega-menu-projects">
+            <a href="melanu.html" class="mega-project">
+              <img src="images/melanu/hero.png" alt="Melanu Skin Care"/>
+              <span class="mega-project-label">Melanu Skin Care</span>
+            </a>
+            <a href="loud-women-lead.html" class="mega-project">
+              <img src="images/lwl/hero.png" alt="Loud Women Lead"/>
+              <span class="mega-project-label">Loud Women Lead</span>
+            </a>
+            <a href="anchors-of-healing.html" class="mega-project">
+              <img src="images/aoh/hero.png" alt="Anchors of Healing"/>
+              <span class="mega-project-label">Anchors of Healing</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+  <a href="contact.html" class="nav-cta-btn">Book a Call</a>
+  <div class="nav-icons">
+    <button class="nav-icon" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+  </div>
+  </div>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-bg" id="searchOverlayBg"></div>
+  <div class="search-modal">
+    <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-inner">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search ProLaunch..." autocomplete="off"/>
+      <div class="search-suggestions" id="searchSuggestions">
+        <span class="search-suggestion-label">Quick Links</span>
+        <a href="services.html" class="search-suggestion">Services</a>
+        <a href="services.html#websites" class="search-suggestion">Custom Websites</a>
+        <a href="services.html#ai-avatars" class="search-suggestion">Marketing Campaigns</a>
+        <a href="services.html#app-dev" class="search-suggestion">App Development</a>
+        <a href="portfolio.html" class="search-suggestion">Latest Work</a>
+        <a href="contact.html" class="search-suggestion">Contact Us</a>
+        <a href="about.html" class="search-suggestion">About ProLaunch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <button class="mobile-brand-toggle">Switch to GlamLaunch</button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Latest Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="mobile-book-link">Book a Call &rarr;</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow reveal">Our Services</span>
+    <h1 class="reveal delay-1">Everything You Need<br/>to <em data-brand-key="services-hero-heading-em">Grow</em></h1>
+    <p class="reveal delay-2" data-brand-key="services-hero-sub">From custom websites to AI-powered avatars, we build the digital foundation your business needs to thrive.</p>
+  </div>
+</section>
+
+<section class="section section--dark service-block" id="websites" aria-labelledby="svc-websites">
+  <div class="container">
+    <div class="service-row">
+      <div class="service-img reveal">
+        <img src="images/workspace-1.jpg" alt="Custom website design" loading="lazy" data-brand-img="svc-websites-img"/>
+      </div>
+      <div class="service-content reveal delay-1">
+        <span class="eyebrow">Lead Service</span>
+        <h2 id="svc-websites"><em data-brand-key="svc-websites-h2-em">Custom</em> <span data-brand-key="svc-websites-h2-rest">Websites</span></h2>
+        <p data-brand-key="svc-websites-p">We design and build fully custom websites tailored to your brand. No templates, no cookie-cutter designs — every site is built from scratch to represent your unique business and convert visitors into customers.</p>
+        <ul class="service-features">
+          <li>Fully responsive, mobile-first design</li>
+          <li>SEO-optimized from day one</li>
+          <li>Fast load times and modern performance</li>
+          <li>Brand-aligned visuals and copywriting</li>
+          <li>Hosting setup and deployment</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light service-block" id="landing-pages" aria-labelledby="svc-landing">
+  <div class="container">
+    <div class="service-row reverse">
+      <div class="service-img reveal">
+        <img src="images/landing-pages.jpg" alt="Landing page design" loading="lazy" data-brand-img="svc-landing-img"/>
+      </div>
+      <div class="service-content reveal delay-1">
+        <span class="eyebrow" style="color:var(--black);">Conversion-Focused</span>
+        <h2 id="svc-landing"><em style="color:var(--black);" data-brand-key="svc-landing-h2-em">Landing</em> <span data-brand-key="svc-landing-h2-rest">Pages</span></h2>
+        <p data-brand-key="svc-landing-p">Single-page sites designed with one goal: convert. Whether you're launching a product, collecting emails, or promoting an event, our landing pages are built to drive action.</p>
+        <ul class="service-features">
+          <li>One clear call-to-action per page</li>
+          <li>A/B testing-ready layouts</li>
+          <li>Lead capture form integration</li>
+          <li>Fast turnaround — live in days</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark service-block" id="social-content" aria-labelledby="svc-social-content">
+  <div class="container">
+    <div class="service-row">
+      <div class="service-img reveal">
+        <img src="images/entrepreneur-dark.jpg" alt="Social media content creation" loading="lazy" data-brand-img="svc-social-content-img"/>
+      </div>
+      <div class="service-content reveal delay-1">
+        <span class="eyebrow">Content Creation</span>
+        <h2 id="svc-social-content"><span data-brand-key="svc-social-content-h2-pre">Social Media</span> <em data-brand-key="svc-social-content-h2-em">Content</em></h2>
+        <p data-brand-key="svc-social-content-p">We create scroll-stopping content that builds your brand and grows your audience. From graphics to reels to captions — everything your feed needs to look professional and stay consistent.</p>
+        <ul class="service-features">
+          <li>Custom graphics and branded templates</li>
+          <li>Short-form video / Reels / TikToks</li>
+          <li>Engaging captions and hashtag strategy</li>
+          <li>Content calendars and batch creation</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light service-block" id="social-management" aria-labelledby="svc-social-mgmt">
+  <div class="container">
+    <div class="service-row reverse">
+      <div class="service-img reveal">
+        <img src="images/about-entrepreneur.jpg" alt="Social media management" loading="lazy" data-brand-img="svc-social-mgmt-img"/>
+      </div>
+      <div class="service-content reveal delay-1">
+        <span class="eyebrow" style="color:var(--black);">Hands-Free Growth</span>
+        <h2 id="svc-social-mgmt"><span data-brand-key="svc-social-mgmt-h2-pre">Social Media</span> <em style="color:var(--black);" data-brand-key="svc-social-mgmt-h2-em">Management</em></h2>
+        <p data-brand-key="svc-social-mgmt-p">Hand us the keys to your socials. We handle posting, scheduling, engagement, and analytics so you can focus on running your business while your online presence grows.</p>
+        <ul class="service-features">
+          <li>Daily posting and scheduling</li>
+          <li>Community engagement and DM management</li>
+          <li>Monthly analytics and performance reports</li>
+          <li>Platform strategy (Instagram, TikTok, LinkedIn, Facebook)</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark service-block" id="ai-avatars" aria-labelledby="svc-avatars">
+  <div class="container">
+    <div class="service-row">
+      <div class="service-img reveal">
+        <img src="images/marketing-campaigns.jpg" alt="Marketing campaigns" loading="lazy" data-brand-img="svc-avatars-img"/>
+      </div>
+      <div class="service-content reveal delay-1">
+        <span class="eyebrow">Strategy &amp; Funnels</span>
+        <h2 id="svc-avatars"><span data-brand-key="svc-avatars-h2-pre">Marketing</span> <em data-brand-key="svc-avatars-h2-em">Campaigns</em></h2>
+        <p data-brand-key="svc-avatars-p">From launch campaigns to nurture sequences, we plan, build and run marketing programs that turn one-time visitors into long-term customers. Funnels, email flows, paid social, and follow-up automation — every touchpoint planned, branded and built to convert.</p>
+        <ul class="service-features">
+          <li>Multi-channel launch &amp; promo campaigns</li>
+          <li>Email funnels &amp; nurture sequences</li>
+          <li>Paid social &amp; retargeting strategy</li>
+          <li>Conversion tracking, analytics &amp; reporting</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service: App Development -->
+<section class="section section--light service-block" id="app-dev" aria-labelledby="svc-app-dev">
+  <div class="container">
+    <div class="service-row reverse">
+      <div class="service-img reveal">
+        <img src="images/app-development.jpg" alt="App development" loading="lazy" data-brand-img="svc-app-dev-img"/>
+      </div>
+      <div class="service-content reveal delay-1">
+        <span class="eyebrow" style="color:var(--black);">Build &amp; Scale</span>
+        <h2 id="svc-app-dev"><em style="color:var(--black);" data-brand-key="svc-app-dev-h2-em">App</em> <span data-brand-key="svc-app-dev-h2-rest">Development</span></h2>
+        <p data-brand-key="svc-app-dev-p">From concept to launch, we build custom mobile and web applications that solve real problems for your business. Whether it's a customer-facing app, an internal tool, or a full SaaS product — we bring your idea to life.</p>
+        <ul class="service-features">
+          <li>iOS and Android mobile apps</li>
+          <li>Web applications and dashboards</li>
+          <li>UI/UX design and prototyping</li>
+          <li>API integrations and backend development</li>
+          <li>Ongoing support and maintenance</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2 data-brand-key="svc-cta-heading">Not Sure What You Need?</h2>
+      <p data-brand-key="svc-cta-sub">Book a free consultation. We'll figure out the best package for your business together.</p>
+      <a href="contact.html" class="btn-primary">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+      <img src="prolaunch.png" alt="ProLaunch" class="footer-logo-img pro-logo"/>
+      <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="footer-logo-img glam-logo"/>
+    </a>
+    <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">LI</a></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch, a ProLaunch company. All rights reserved.</p></div>
+</footer>
+<script src="js/brand-content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

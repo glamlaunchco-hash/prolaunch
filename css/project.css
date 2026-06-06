@@ -1,0 +1,183 @@
+/* ============================================================
+   PROLAUNCH — Project Showcase Page
+   ============================================================ */
+
+/* ---- Project Hero (full bleed) ---- */
+.project-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  overflow: hidden;
+  margin-top: -120px;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,10,0.5);
+}
+.project-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+.project-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* ---- Project Grid (two column) ---- */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.project-grid.reverse .project-img { order: 2; }
+.project-grid.reverse .project-info { order: 1; }
+
+.project-img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.project-info h2 {
+  margin-bottom: 20px;
+}
+.project-info > p {
+  margin-bottom: 16px;
+}
+
+.project-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--lime);
+  margin: 24px 0;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.project-meta p {
+  font-size: 0.9rem;
+}
+.project-meta strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* ---- What We Did section ---- */
+.project-whatwedid {
+  background: var(--lime);
+  padding: var(--pad) 0;
+}
+.project-whatwedid h2,
+.project-whatwedid h2 em {
+  color: var(--black);
+}
+.project-whatwedid .eyebrow {
+  color: var(--black);
+  opacity: 0.6;
+}
+.project-whatwedid p {
+  color: rgba(10,10,10,0.7);
+}
+
+/* GlamLaunch: What We Did uses pink */
+[data-brand="glamlaunch"] .project-whatwedid {
+  background: #E5328F;
+}
+[data-brand="glamlaunch"] .project-whatwedid h2,
+[data-brand="glamlaunch"] .project-whatwedid h2 em,
+[data-brand="glamlaunch"] .project-whatwedid .eyebrow {
+  color: #fff;
+}
+[data-brand="glamlaunch"] .project-whatwedid .eyebrow {
+  opacity: 0.7;
+}
+[data-brand="glamlaunch"] .project-whatwedid p {
+  color: rgba(255,255,255,0.8);
+}
+
+/* ---- Services Delivered Row ---- */
+.project-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  text-align: center;
+}
+.project-svc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 32px 16px;
+}
+.project-svc-item svg {
+  color: var(--lime);
+}
+.project-svc-item h4 {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ---- Full Width Image ---- */
+.project-fullwidth {
+  width: 100%;
+  overflow: hidden;
+}
+.project-fullwidth img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+/* ---- GlamLaunch overrides ---- */
+[data-brand="glamlaunch"] .project-hero-overlay {
+  background: rgba(10,10,10,0.45);
+}
+[data-brand="glamlaunch"] .project-hero h1 {
+  color: #fff;
+}
+[data-brand="glamlaunch"] .project-divider {
+  background: #E5328F;
+}
+[data-brand="glamlaunch"] .project-meta strong {
+  color: #1d1d1f;
+}
+[data-brand="glamlaunch"] .project-svc-item svg {
+  color: #E5328F;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .project-hero { height: 50vh; min-height: 350px; }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .project-grid.reverse .project-img { order: 0; }
+  .project-grid.reverse .project-info { order: 0; }
+  .project-img img { height: 300px; }
+  .project-svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-fullwidth img { height: 35vh; }
+}

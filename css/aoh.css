@@ -1,0 +1,55 @@
+/* ============================================================
+   PROLAUNCH — Anchors of Healing Project Page
+   ============================================================ */
+
+/* ---- Hero ---- */
+.aoh-hero {
+  height: 75vh;
+  min-height: 550px;
+}
+.aoh-hero .project-hero-overlay {
+  background: rgba(10,10,10,0.45);
+}
+
+/* ---- What We Did — calming blue-grey section ---- */
+.aoh-whatwedid {
+  background: #a2b9cb;
+  padding: var(--pad) 0;
+}
+.aoh-whatwedid h2,
+.aoh-whatwedid h2 em {
+  color: #fff;
+}
+.aoh-whatwedid .eyebrow {
+  color: #fff;
+  opacity: 0.7;
+}
+.aoh-whatwedid p {
+  color: rgba(255,255,255,0.85);
+}
+.aoh-whatwedid .project-img img {
+  height: 420px;
+}
+
+/* ---- Video Section ---- */
+.aoh-video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.aoh-video-content h2 {
+  margin-bottom: 16px;
+}
+.aoh-video-wrap video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .aoh-hero { height: 55vh; min-height: 380px; }
+  .aoh-whatwedid .project-img img { height: 300px; }
+  .aoh-video-grid { grid-template-columns: 1fr; gap: 32px; }
+}

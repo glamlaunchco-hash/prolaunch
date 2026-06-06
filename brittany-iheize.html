@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brittany Iheize | Partner Photographer | ProLaunch</title>
+  <meta name="description" content="Brittany Iheize — partner photographer for ProLaunch and GlamLaunch. Lifestyle, brand and event photography for entrepreneurs and beauty businesses."/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/project.css"/>
+  <link rel="icon" type="image/png" href="images/prolaunch.png"/>
+  <script>(function(){var b=localStorage.getItem('prolaunch-brand');if(!b){var h=(location.hostname||'').toLowerCase();b=h.indexOf('glamlaunch.co')!==-1?'glamlaunch':'prolaunch';}if(b==='glamlaunch')document.documentElement.dataset.brand=b;})();</script>
+  <style>
+    /* Brittany partner page */
+    .partner-hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0d0d0d;
+    }
+    .partner-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+    .partner-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.85) 100%);
+    }
+    .partner-hero-content {
+      position: relative; z-index: 2;
+      padding: 0 6vw 8vh;
+      color: #fff;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .partner-hero-content .eyebrow {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--lime, #d8f56b);
+      margin-bottom: 18px;
+    }
+    .partner-hero-content h1 {
+      font-family: 'Noto Serif Display', serif;
+      font-weight: 400;
+      font-size: clamp(2.6rem, 7vw, 6rem);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      margin: 0 0 18px;
+      color: #fff;
+    }
+    .partner-hero-content h1 em { font-style: italic; font-weight: 300; }
+    .partner-hero-content .tagline {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      max-width: 560px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .partner-overview { padding: 96px 0; }
+    .partner-overview .container { max-width: 1180px; }
+    .partner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .partner-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 40px 36px;
+    }
+    .partner-card .eyebrow {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--lime, #d8f56b);
+      margin-bottom: 14px;
+    }
+    .partner-card h2 {
+      font-family: 'Noto Serif Display', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.15;
+      margin: 0 0 22px;
+    }
+    .partner-card h2 em { font-style: italic; font-weight: 300; }
+    .partner-card p {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.78);
+      margin: 0 0 16px;
+    }
+    .partner-meta { margin-top: 24px; display: grid; gap: 8px; }
+    .partner-meta li {
+      list-style: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .partner-meta strong { color: #fff; font-weight: 500; margin-right: 6px; }
+
+    .partner-cta {
+      position: relative;
+      padding: 110px 24px;
+      text-align: center;
+      background: #0d0d0d;
+      overflow: hidden;
+    }
+    .partner-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(216,245,107,0.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .partner-cta-inner {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      color: #fff;
+    }
+    .partner-cta .eyebrow {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--lime, #d8f56b);
+      margin-bottom: 18px;
+    }
+    .partner-cta h2 {
+      font-family: 'Noto Serif Display', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      margin: 0 0 18px;
+      color: #fff;
+    }
+    .partner-cta h2 em { font-style: italic; font-weight: 300; }
+    .partner-cta p {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.78);
+      margin: 0 auto 36px;
+      max-width: 540px;
+    }
+
+    @media (max-width: 860px) {
+      .partner-hero { min-height: 78vh; }
+      .partner-grid { grid-template-columns: 1fr; gap: 36px; }
+      .partner-overview { padding: 64px 0; }
+      .partner-card { padding: 32px 24px; }
+      .partner-cta { padding: 80px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Brand Tabs -->
+<div class="brand-tabs">
+  <button class="brand-tab brand-tab--pro" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='prolaunch')toggleBrand()">PROLAUNCH</button>
+  <button class="brand-tab brand-tab--glam" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='glamlaunch')toggleBrand()">GLAMLAUNCH</button>
+</div>
+
+<div id="page-loader" role="status" aria-label="Loading">
+  <img src="prolaunch.png" alt="" class="loader-logo pro-logo" aria-hidden="true"/>
+  <img src="GlamLaunch-Logo-white.png" alt="" class="loader-logo glam-logo" aria-hidden="true"/>
+  <div class="loader-bar"></div>
+</div>
+<a href="https://glamlaunch.co/pages/social-pmp?_pos=1&_sid=9fd7e38e9&_ss=r" class="float-book" aria-label="Book a session">Book a Session</a>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Home">
+    <img src="prolaunch.png" alt="ProLaunch" class="nav-logo-img pro-logo"/>
+    <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="nav-logo-img glam-logo"/>
+  </a>
+  <div class="brand-toggle">
+    <span class="brand-toggle-dot">&middot;</span>
+    <button class="brand-toggle-btn" aria-label="Switch brand">GlamLaunch</button>
+  </div>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="services.html" class="nav-link">Services</a></li>
+    <li><a href="portfolio.html" class="nav-link">Latest Work</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://glamlaunch.co/pages/social-pmp?_pos=1&_sid=9fd7e38e9&_ss=r" class="nav-cta-btn">Book a Session</a>
+  </div>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <button class="mobile-brand-toggle">Switch to GlamLaunch</button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Latest Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="https://glamlaunch.co/pages/social-pmp?_pos=1&_sid=9fd7e38e9&_ss=r" class="mobile-book-link">Book a Session &rarr;</a>
+</div>
+
+<!-- Hero -->
+<section class="partner-hero">
+  <img src="images/brittany/hero.webp" alt="Brittany Iheize" class="partner-hero-img"/>
+  <div class="partner-hero-overlay"></div>
+  <div class="partner-hero-content reveal">
+    <span class="eyebrow">Partner Photographer</span>
+    <h1>Brittany <em>Iheize</em></h1>
+    <p class="tagline">Lifestyle, brand and event photography for entrepreneurs and beauty businesses launching online.</p>
+  </div>
+</section>
+
+<!-- Partnership Overview -->
+<section class="section section--dark partner-overview">
+  <div class="container">
+    <div class="partner-grid">
+      <div class="partner-card reveal">
+        <span class="eyebrow">Our Partnership</span>
+        <h2>Polished Visuals for <em>Every Launch</em></h2>
+        <p>Brittany is our go-to lens for client photoshoots, brand campaigns and event coverage. From product flat-lays to founder portraits to live photo-booth coverage, her work brings the polish your brand deserves.</p>
+        <p>When you book through us, you get her eye for detail paired with our launch strategy &mdash; one team, one cohesive look.</p>
+      </div>
+      <div class="partner-card reveal delay-1">
+        <span class="eyebrow">Quick Facts</span>
+        <h2>What She <em>Specializes In</em></h2>
+        <ul class="partner-meta">
+          <li><strong>Brand &amp; Lifestyle:</strong> Editorial portraits, product, on-brand campaigns</li>
+          <li><strong>Events:</strong> Launches, parties, photo-booth coverage</li>
+          <li><strong>Headshots:</strong> Founder, team, professional</li>
+          <li><strong>Based:</strong> Available for travel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="partner-cta" aria-label="Book a session with Brittany">
+  <div class="partner-cta-inner reveal">
+    <span class="eyebrow">Book a Session</span>
+    <h2>Ready to Work with <em>Brittany?</em></h2>
+    <p>Reserve your photoshoot or event coverage through our booking portal. We'll match you with the right package and lock in your date.</p>
+    <a href="https://glamlaunch.co/pages/social-pmp?_pos=1&_sid=9fd7e38e9&_ss=r" class="btn-primary">Book Your Session</a>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+      <img src="prolaunch.png" alt="ProLaunch" class="footer-logo-img pro-logo"/>
+      <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="footer-logo-img glam-logo"/>
+    </a>
+    <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">LI</a></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch, a ProLaunch company. All rights reserved.</p></div>
+</footer>
+<script src="js/brand-content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* ============================================================
+   PROLAUNCH — Melanu Skin Care Project Page
+   ============================================================ */
+
+/* ---- Hero ---- */
+.melanu-hero {
+  height: 75vh;
+  min-height: 550px;
+}
+.melanu-hero .project-hero-overlay {
+  background: rgba(10,10,10,0.4);
+}
+
+/* ---- What We Did — full-bleed two-column background images ---- */
+.melanu-whatwedid {
+  position: relative;
+  overflow: hidden;
+}
+.melanu-whatwedid-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 65vh;
+}
+.melanu-whatwedid-col {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.melanu-whatwedid-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,10,0.6);
+}
+.melanu-whatwedid-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+}
+.melanu-whatwedid-heading h2 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: #fff;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Description section below — centered, dark brown text */
+.melanu-whatwedid-desc {
+  background: #c99b76;
+  padding: clamp(48px, 6vw, 80px) 0;
+  text-align: center;
+}
+.melanu-whatwedid-desc .melanu-whatwedid-text {
+  margin: 0 auto;
+}
+.melanu-whatwedid-desc h2,
+.melanu-whatwedid-desc h2 em {
+  color: #3a2010;
+}
+.melanu-whatwedid-desc .eyebrow {
+  color: #3a2010;
+  opacity: 0.7;
+}
+.melanu-whatwedid-desc p {
+  color: #4a2e18;
+}
+
+/* ---- Services Row — thin, minimal like reference ---- */
+.melanu-services-row {
+  background: #c99b76;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: clamp(40px, 5vw, 60px) 0;
+}
+.melanu-services-row .project-svc-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.melanu-services-row .project-svc-item {
+  padding: 16px 12px;
+  gap: 10px;
+}
+.melanu-services-row .project-svc-item svg {
+  color: rgba(255,255,255,0.7);
+  width: 28px;
+  height: 28px;
+}
+.melanu-services-row .project-svc-item h4 {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+}
+
+/* ---- Video Hero — full-bleed poster with play button ---- */
+.melanu-video-hero {
+  position: relative;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.melanu-video-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,10,0.55);
+}
+.melanu-video-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.melanu-video-hero-content h2 {
+  margin-bottom: 28px;
+}
+.melanu-play-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: transform 0.4s var(--luxury-ease), opacity 0.3s;
+}
+.melanu-play-btn:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* ---- Video Modal ---- */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s var(--luxury-ease), visibility 0.4s;
+}
+.video-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+.video-modal-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.video-modal-inner {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+}
+.video-modal-inner video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+.video-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.video-modal-close:hover {
+  opacity: 0.7;
+}
+
+/* ---- CTA — full-bleed background image ---- */
+.melanu-cta {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.melanu-cta-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.melanu-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,10,0.6);
+}
+.melanu-cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: clamp(60px, 10vw, 120px) clamp(20px, 4vw, 40px);
+}
+.melanu-cta-content h2 {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 36px;
+}
+.melanu-cta-pink {
+  color: #E5328F;
+  animation: whiteToPink 2s ease-in-out infinite alternate;
+}
+@keyframes whiteToPink {
+  0%   { color: #fff; }
+  100% { color: #E5328F; }
+}
+.melanu-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.melanu-cta-btn {
+  padding: 16px 36px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+}
+.melanu-cta .btn-outline {
+  color: #fff;
+  border-color: #fff;
+  background: transparent;
+}
+.melanu-cta .btn-outline:hover {
+  background: #fff;
+  color: #0A0A0A;
+  border-color: #fff;
+}
+.melanu-cta .btn-primary {
+  background: #0A0A0A;
+  color: #fff;
+}
+.melanu-cta .btn-primary::before {
+  background: #E5328F;
+}
+
+/* ---- GlamLaunch overrides ---- */
+[data-brand="glamlaunch"] .melanu-whatwedid-desc {
+  background: #c99b76;
+}
+[data-brand="glamlaunch"] .melanu-services-row {
+  background: #c99b76;
+}
+[data-brand="glamlaunch"] .melanu-services-row .project-svc-item svg {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .melanu-hero { height: 55vh; min-height: 380px; }
+  .melanu-whatwedid-split { grid-template-columns: 1fr; min-height: auto; }
+  .melanu-whatwedid-col { min-height: 40vh; }
+  .melanu-whatwedid-heading h2 { font-size: clamp(2rem, 8vw, 3.5rem); white-space: normal; }
+  .melanu-video-grid { grid-template-columns: 1fr; gap: 32px; }
+}

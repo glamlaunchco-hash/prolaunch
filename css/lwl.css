@@ -1,0 +1,56 @@
+/* ============================================================
+   PROLAUNCH — Loud Women Lead Project Page
+   ============================================================ */
+
+/* ---- Hero ---- */
+.lwl-hero {
+  height: 75vh;
+  min-height: 550px;
+}
+.lwl-hero .project-hero-overlay {
+  background: rgba(10,10,10,0.35);
+}
+
+/* ---- What We Did — bold magenta section ---- */
+.lwl-whatwedid {
+  background: #d43747;
+  padding: var(--pad) 0;
+}
+.lwl-whatwedid h2,
+.lwl-whatwedid h2 em {
+  color: #fff;
+}
+.lwl-whatwedid .eyebrow {
+  color: #fff;
+  opacity: 0.7;
+}
+.lwl-whatwedid p {
+  color: rgba(255,255,255,0.85);
+}
+
+/* ---- Services Row ---- */
+.lwl-services-row .project-svc-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ---- Video Section ---- */
+.lwl-video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.lwl-video-content h2 {
+  margin-bottom: 16px;
+}
+.lwl-video-wrap video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .lwl-hero { height: 55vh; min-height: 380px; }
+  .lwl-video-grid { grid-template-columns: 1fr; gap: 32px; }
+}

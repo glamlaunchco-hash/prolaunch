@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loud Women Lead | Latest Work | ProLaunch Creative Agency</title>
+  <meta name="description" content="Website redesign for Loud Women Lead — Emmy-winning journalist Tashara Parker's bold digital platform repositioned from Wix to a modern, growth-ready design."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/project.css"/>
+  <link rel="stylesheet" href="css/lwl.css"/>
+  <link rel="stylesheet" href="css/melanu.css"/>
+  <link rel="icon" type="image/png" href="images/prolaunch.png"/>
+  <script>(function(){var b=localStorage.getItem('prolaunch-brand');if(!b){var h=(location.hostname||'').toLowerCase();b=h.indexOf('glamlaunch.co')!==-1?'glamlaunch':'prolaunch';}if(b==='glamlaunch')document.documentElement.dataset.brand=b;})();</script>
+</head>
+<body>
+
+<!-- Brand Tabs -->
+<div class="brand-tabs">
+  <button class="brand-tab brand-tab--pro" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='prolaunch')toggleBrand()">PROLAUNCH</button>
+  <button class="brand-tab brand-tab--glam" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='glamlaunch')toggleBrand()">GLAMLAUNCH</button>
+</div>
+
+<div id="page-loader" role="status" aria-label="Loading"><img src="prolaunch.png" alt="" class="loader-logo pro-logo" aria-hidden="true"/>
+  <img src="GlamLaunch-Logo-white.png" alt="" class="loader-logo glam-logo" aria-hidden="true"/><div class="loader-bar"></div></div>
+<a href="contact.html#scheduler" class="float-book" aria-label="Book a call">Book a Call</a>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Home">
+    <img src="prolaunch.png" alt="ProLaunch" class="nav-logo-img pro-logo"/>
+    <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="nav-logo-img glam-logo"/>
+  </a>
+  <div class="brand-toggle">
+    <span class="brand-toggle-dot">&middot;</span>
+    <button class="brand-toggle-btn" aria-label="Switch brand">GlamLaunch</button>
+  </div>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="services.html" class="nav-link">Services</a></li>
+    <li class="nav-item has-mega">
+      <a href="portfolio.html" class="nav-link active">Latest Work</a>
+      <div class="mega-menu">
+        <div class="mega-menu-inner">
+          <div class="mega-menu-links">
+            <a href="portfolio.html">All Projects</a>
+            <a href="portfolio.html#websites">Websites</a>
+            <a href="portfolio.html#landing-pages">Landing Pages</a>
+            <a href="portfolio.html#social">Social Media</a>
+            <a href="portfolio.html#avatars">Marketing Campaigns</a>
+          </div>
+          <div class="mega-menu-projects">
+            <a href="melanu.html" class="mega-project">
+              <img src="images/melanu/hero.png" alt="Melanu Skin Care"/>
+              <span class="mega-project-label">Melanu Skin Care</span>
+            </a>
+            <a href="loud-women-lead.html" class="mega-project">
+              <img src="images/lwl/hero.png" alt="Loud Women Lead"/>
+              <span class="mega-project-label">Loud Women Lead</span>
+            </a>
+            <a href="portfolio.html" class="mega-project">
+              <img src="images/studio-interior.jpg" alt="Project" data-brand-img="portfolio-4"/>
+              <span class="mega-project-label">Landing Page</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+  <a href="contact.html" class="nav-cta-btn">Book a Call</a>
+  <div class="nav-icons">
+    <button class="nav-icon" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+  </div>
+  </div>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-bg" id="searchOverlayBg"></div>
+  <div class="search-modal">
+    <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-inner">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search ProLaunch..." autocomplete="off"/>
+      <div class="search-suggestions" id="searchSuggestions">
+        <span class="search-suggestion-label">Quick Links</span>
+        <a href="services.html" class="search-suggestion">Services</a>
+        <a href="services.html#websites" class="search-suggestion">Custom Websites</a>
+        <a href="services.html#ai-avatars" class="search-suggestion">Marketing Campaigns</a>
+        <a href="services.html#app-dev" class="search-suggestion">App Development</a>
+        <a href="portfolio.html" class="search-suggestion">Latest Work</a>
+        <a href="contact.html" class="search-suggestion">Contact Us</a>
+        <a href="about.html" class="search-suggestion">About ProLaunch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <button class="mobile-brand-toggle">Switch to GlamLaunch</button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Latest Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="mobile-book-link">Book a Call &rarr;</a>
+</div>
+
+<!-- Hero Banner -->
+<section class="project-hero lwl-hero">
+  <img src="images/lwl/hero.png" alt="Loud Women Lead" class="project-hero-img"/>
+  <div class="project-hero-overlay"></div>
+  <div class="project-hero-content">
+    <h1 class="reveal">LOUD WOMEN LEAD</h1>
+  </div>
+</section>
+
+<!-- Summary — full-bleed with Tashara + laptop background -->
+<section class="lwl-summary">
+  <div class="lwl-summary-bg" style="background-image:url('images/lwl/hero.png');"></div>
+  <div class="lwl-summary-overlay"></div>
+  <div class="lwl-summary-inner reveal">
+    <span class="eyebrow">What We Did</span>
+    <h2>Website Development for <em>Loud Women Lead</em></h2>
+    <p>Tashara Parker, Emmy award-winning journalist and founder of Loud Women Lead, approached GlamLaunch with a vision: transform her existing Wix website into a powerful digital platform that reflects the bold, unapologetic energy of her movement. The goal was to reposition the brand with a modern, user-friendly design that could grow alongside her evolving initiatives.</p>
+    <button type="button" class="btn-primary lwl-view-site-btn" id="lwlViewSite" style="margin-top:24px;">View Site</button>
+  </div>
+</section>
+
+<!-- Video Modal Overlay (triggered by View Site) -->
+<div class="video-modal" id="lwlVideoModal">
+  <div class="video-modal-bg" id="lwlVideoModalBg"></div>
+  <div class="video-modal-inner">
+    <button class="video-modal-close" id="lwlVideoClose" aria-label="Close video">&times;</button>
+    <video id="lwlVideo" controls playsinline>
+      <source src="images/lwl/video.mp4" type="video/mp4"/>
+    </video>
+  </div>
+</div>
+
+<style>
+  .lwl-summary {
+    position: relative;
+    padding: 140px 24px;
+    overflow: hidden;
+    color: #fff;
+  }
+  .lwl-summary-bg {
+    position: absolute; inset: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  .lwl-summary-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.78) 100%);
+  }
+  .lwl-summary-inner {
+    position: relative; z-index: 2;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .lwl-summary-inner .eyebrow {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--lime, #d8f56b);
+    margin-bottom: 18px;
+  }
+  .lwl-summary-inner h2 {
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    line-height: 1.1;
+    margin: 0 0 26px;
+    color: #fff;
+  }
+  .lwl-summary-inner h2 em { font-style: italic; font-weight: 300; }
+  .lwl-summary-inner p {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.82);
+    margin: 0 0 8px;
+    max-width: 640px;
+  }
+  .lwl-view-site-btn {
+    cursor: pointer;
+    border: none;
+    font-family: 'Jost', sans-serif;
+  }
+  @media (max-width: 760px) {
+    .lwl-summary { padding: 100px 22px; }
+  }
+</style>
+
+<!-- CTA — full-bleed with background image -->
+<section class="melanu-cta" aria-label="Call to action">
+  <div class="melanu-cta-bg" style="background-image:url('images/lwl/hero.png');"></div>
+  <div class="melanu-cta-overlay"></div>
+  <div class="melanu-cta-content reveal">
+    <h2>BOOK YOUR<br/><span class="melanu-cta-pink">GLAMLAUNCH</span><br/><span class="melanu-cta-pink">GLOW-UP</span> TODAY</h2>
+    <div class="melanu-cta-buttons">
+      <a href="contact.html" class="btn-primary melanu-cta-btn">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+      <img src="prolaunch.png" alt="ProLaunch" class="footer-logo-img pro-logo"/>
+      <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="footer-logo-img glam-logo"/>
+    </a>
+    <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">LI</a></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch, a ProLaunch company. All rights reserved.</p></div>
+</footer>
+<script src="js/brand-content.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // View Site button -> video modal overlay
+  (function() {
+    var trigger = document.getElementById('lwlViewSite');
+    var modal   = document.getElementById('lwlVideoModal');
+    var bg      = document.getElementById('lwlVideoModalBg');
+    var closeBtn= document.getElementById('lwlVideoClose');
+    var video   = document.getElementById('lwlVideo');
+    if (!trigger || !modal) return;
+
+    function open() {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      if (video) video.play();
+    }
+    function close() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      if (video) { video.pause(); video.currentTime = 0; }
+    }
+    trigger.addEventListener('click', open);
+    if (bg) bg.addEventListener('click', close);
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+  })();
+</script>
+</body>
+</html>

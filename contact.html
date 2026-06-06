@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | ProLaunch Creative Agency</title>
+  <meta name="description" content="Book a free consultation with ProLaunch. Let's get your business online with a custom website, social media strategy, or AI-powered digital avatar."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/contact.css"/>
+  <link rel="icon" type="image/png" href="images/prolaunch.png"/>
+  <script>(function(){var b=localStorage.getItem('prolaunch-brand');if(!b){var h=(location.hostname||'').toLowerCase();b=h.indexOf('glamlaunch.co')!==-1?'glamlaunch':'prolaunch';}if(b==='glamlaunch')document.documentElement.dataset.brand=b;})();</script>
+</head>
+<body>
+
+<!-- Brand Tabs -->
+<div class="brand-tabs">
+  <button class="brand-tab brand-tab--pro" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='prolaunch')toggleBrand()">PROLAUNCH</button>
+  <button class="brand-tab brand-tab--glam" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='glamlaunch')toggleBrand()">GLAMLAUNCH</button>
+</div>
+
+<div id="page-loader" role="status" aria-label="Loading"><img src="prolaunch.png" alt="" class="loader-logo pro-logo" aria-hidden="true"/>
+  <img src="GlamLaunch-Logo-white.png" alt="" class="loader-logo glam-logo" aria-hidden="true"/><div class="loader-bar"></div></div>
+<a href="#scheduler" class="float-book" aria-label="Book a call">Book a Call</a>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Home">
+    <img src="prolaunch.png" alt="ProLaunch" class="nav-logo-img pro-logo"/>
+    <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="nav-logo-img glam-logo"/>
+  </a>
+  <div class="brand-toggle">
+    <span class="brand-toggle-dot">&middot;</span>
+    <button class="brand-toggle-btn" aria-label="Switch brand">GlamLaunch</button>
+  </div>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="services.html" class="nav-link">Services</a></li>
+    <li class="nav-item has-mega">
+      <a href="portfolio.html" class="nav-link">Latest Work</a>
+      <div class="mega-menu">
+        <div class="mega-menu-inner">
+          <div class="mega-menu-links">
+            <a href="portfolio.html">All Projects</a>
+            <a href="portfolio.html#websites">Websites</a>
+            <a href="portfolio.html#landing-pages">Landing Pages</a>
+            <a href="portfolio.html#social">Social Media</a>
+            <a href="portfolio.html#avatars">Marketing Campaigns</a>
+          </div>
+          <div class="mega-menu-projects">
+            <a href="melanu.html" class="mega-project">
+              <img src="images/melanu/hero.png" alt="Melanu Skin Care"/>
+              <span class="mega-project-label">Melanu Skin Care</span>
+            </a>
+            <a href="loud-women-lead.html" class="mega-project">
+              <img src="images/lwl/hero.png" alt="Loud Women Lead"/>
+              <span class="mega-project-label">Loud Women Lead</span>
+            </a>
+            <a href="anchors-of-healing.html" class="mega-project">
+              <img src="images/aoh/hero.png" alt="Anchors of Healing"/>
+              <span class="mega-project-label">Anchors of Healing</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+  <a href="contact.html" class="nav-cta-btn">Book a Call</a>
+  <div class="nav-icons">
+    <button class="nav-icon" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+  </div>
+  </div>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-bg" id="searchOverlayBg"></div>
+  <div class="search-modal">
+    <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-inner">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search ProLaunch..." autocomplete="off"/>
+      <div class="search-suggestions" id="searchSuggestions">
+        <span class="search-suggestion-label">Quick Links</span>
+        <a href="services.html" class="search-suggestion">Services</a>
+        <a href="services.html#websites" class="search-suggestion">Custom Websites</a>
+        <a href="services.html#ai-avatars" class="search-suggestion">Marketing Campaigns</a>
+        <a href="services.html#app-dev" class="search-suggestion">App Development</a>
+        <a href="portfolio.html" class="search-suggestion">Latest Work</a>
+        <a href="contact.html" class="search-suggestion">Contact Us</a>
+        <a href="about.html" class="search-suggestion">About ProLaunch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <button class="mobile-brand-toggle">Switch to GlamLaunch</button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Latest Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="mobile-book-link">Book a Call &rarr;</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow reveal">Get In Touch</span>
+    <h1 class="reveal delay-1"><span data-brand-key="contact-hero-heading-1">Let's</span> <em data-brand-key="contact-hero-heading-em">Build</em><br/><span data-brand-key="contact-hero-heading-2">Your Business</span></h1>
+    <p class="reveal delay-2" data-brand-key="contact-hero-sub">Book a free consultation or send us a message. We'll get back to you within 24 hours.</p>
+  </div>
+</section>
+
+<section class="section section--dark contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form-wrap reveal">
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+          <input type="hidden" name="form-name" value="contact"/>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Jane Smith"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="jane@business.com"/>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="website">Custom Website</option>
+              <option value="landing-page">Landing Page</option>
+              <option value="social-content">Social Media Content</option>
+              <option value="social-management">Social Media Management</option>
+              <option value="marketing-campaigns">Marketing Campaigns</option>
+              <option value="templates">Squarespace Templates</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project</label>
+            <textarea id="message" name="message" rows="5" placeholder="What are you working on? What's your timeline?"></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-sidebar reveal delay-1">
+        <div class="sidebar-block">
+          <h4>Book a Call</h4>
+          <p>Prefer to talk? Schedule a free 20-minute consultation.</p>
+          <a href="#scheduler" class="btn-outline sidebar-cta">Schedule Call &rarr;</a>
+        </div>
+        <div class="sidebar-block">
+          <h4>Follow Us</h4>
+          <div class="sidebar-social">
+            <a href="#" class="sidebar-social-link">Instagram</a>
+            <a href="#" class="sidebar-social-link">TikTok</a>
+            <a href="#" class="sidebar-social-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scheduler Section -->
+<section class="section section--dark scheduler-section" id="scheduler">
+  <div class="container">
+    <div class="scheduler-grid">
+      <div class="scheduler-info reveal">
+        <span class="eyebrow">Let's Talk</span>
+        <h2>Set Up Your<br/><em>Consultation Call</em></h2>
+        <div class="project-divider" style="background:var(--lime);width:60px;height:1px;margin:24px 0;"></div>
+        <p>Pick a time that works for you and let's talk through your vision, your goals, and exactly how we'll bring your brand to life online. No pressure — just a conversation.</p>
+        <div class="scheduler-meta">
+          <div class="scheduler-detail"><span class="scheduler-label">Email</span><span>prolaunchmedia@gmail.com</span></div>
+          <div class="scheduler-detail"><span class="scheduler-label">Duration</span><span>20 Minutes</span></div>
+          <div class="scheduler-detail"><span class="scheduler-label">Format</span><span>Phone Call</span></div>
+        </div>
+      </div>
+      <div class="scheduler-embed reveal delay-1">
+        <iframe
+          src="https://glamlaunch.hbportal.co/schedule/675e17ab209576001fe86cae"
+          title="Schedule a Consultation Call"
+          frameborder="0"
+          scrolling="yes"
+          allow="fullscreen"
+          style="width:100%;height:680px;border:none;display:block;border-radius:4px;"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+      <img src="prolaunch.png" alt="ProLaunch" class="footer-logo-img pro-logo"/>
+      <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="footer-logo-img glam-logo"/>
+    </a>
+    <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">LI</a></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch, a ProLaunch company. All rights reserved.</p></div>
+</footer>
+<script src="js/brand-content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

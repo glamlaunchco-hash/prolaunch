@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Showcase | ProLaunch Creative Agency</title>
+  <meta name="description" content="A detailed look at one of our latest projects — design, development, and results."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,500;1,62.5,300;1,62.5,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/project.css"/>
+  <link rel="icon" type="image/png" href="images/prolaunch.png"/>
+  <script>(function(){var b=localStorage.getItem('prolaunch-brand');if(!b){var h=(location.hostname||'').toLowerCase();b=h.indexOf('glamlaunch.co')!==-1?'glamlaunch':'prolaunch';}if(b==='glamlaunch')document.documentElement.dataset.brand=b;})();</script>
+</head>
+<body>
+
+<!-- Brand Tabs -->
+<div class="brand-tabs">
+  <button class="brand-tab brand-tab--pro" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='prolaunch')toggleBrand()">PROLAUNCH</button>
+  <button class="brand-tab brand-tab--glam" onclick="if(typeof toggleBrand==='function'&&getCurrentBrand()!=='glamlaunch')toggleBrand()">GLAMLAUNCH</button>
+</div>
+
+<div id="page-loader" role="status" aria-label="Loading"><img src="prolaunch.png" alt="" class="loader-logo pro-logo" aria-hidden="true"/>
+  <img src="GlamLaunch-Logo-white.png" alt="" class="loader-logo glam-logo" aria-hidden="true"/><div class="loader-bar"></div></div>
+<a href="contact.html" class="float-book" aria-label="Book a call">Book a Call</a>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Home">
+    <img src="prolaunch.png" alt="ProLaunch" class="nav-logo-img pro-logo"/>
+    <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="nav-logo-img glam-logo"/>
+  </a>
+  <div class="brand-toggle">
+    <span class="brand-toggle-dot">&middot;</span>
+    <button class="brand-toggle-btn" aria-label="Switch brand">GlamLaunch</button>
+  </div>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="services.html" class="nav-link">Services</a></li>
+    <li class="nav-item has-mega">
+      <a href="portfolio.html" class="nav-link active">Latest Work</a>
+      <div class="mega-menu">
+        <div class="mega-menu-inner">
+          <div class="mega-menu-links">
+            <a href="portfolio.html">All Projects</a>
+            <a href="portfolio.html#websites">Websites</a>
+            <a href="portfolio.html#landing-pages">Landing Pages</a>
+            <a href="portfolio.html#social">Social Media</a>
+            <a href="portfolio.html#avatars">Marketing Campaigns</a>
+          </div>
+          <div class="mega-menu-projects">
+            <a href="portfolio.html" class="mega-project">
+              <img src="images/workspace-1.jpg" alt="Project" data-brand-img="portfolio-1"/>
+              <span class="mega-project-label">Website Design</span>
+            </a>
+            <a href="portfolio.html" class="mega-project">
+              <img src="images/entrepreneur-dark.jpg" alt="Project" data-brand-img="portfolio-3"/>
+              <span class="mega-project-label">Social Campaign</span>
+            </a>
+            <a href="portfolio.html" class="mega-project">
+              <img src="images/studio-interior.jpg" alt="Project" data-brand-img="portfolio-4"/>
+              <span class="mega-project-label">Landing Page</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+  <a href="contact.html" class="nav-cta-btn">Book a Call</a>
+  <div class="nav-icons">
+    <button class="nav-icon" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+  </div>
+  </div>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-bg" id="searchOverlayBg"></div>
+  <div class="search-modal">
+    <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-inner">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search ProLaunch..." autocomplete="off"/>
+      <div class="search-suggestions" id="searchSuggestions">
+        <span class="search-suggestion-label">Quick Links</span>
+        <a href="services.html" class="search-suggestion">Services</a>
+        <a href="services.html#websites" class="search-suggestion">Custom Websites</a>
+        <a href="services.html#ai-avatars" class="search-suggestion">Marketing Campaigns</a>
+        <a href="services.html#app-dev" class="search-suggestion">App Development</a>
+        <a href="portfolio.html" class="search-suggestion">Latest Work</a>
+        <a href="contact.html" class="search-suggestion">Contact Us</a>
+        <a href="about.html" class="search-suggestion">About ProLaunch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <button class="mobile-brand-toggle">Switch to GlamLaunch</button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Latest Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="mobile-book-link">Book a Call &rarr;</a>
+</div>
+
+<!-- Project Hero — full bleed image -->
+<section class="project-hero">
+  <img src="images/workspace-1.jpg" alt="Project Hero" class="project-hero-img" data-brand-img="portfolio-1"/>
+  <div class="project-hero-overlay"></div>
+  <div class="project-hero-content">
+    <h1 class="reveal">PROJECT NAME</h1>
+  </div>
+</section>
+
+<!-- Project Overview -->
+<section class="section section--dark project-overview">
+  <div class="container">
+    <div class="project-grid">
+      <div class="project-img reveal">
+        <img src="images/workspace-2.jpg" alt="Project detail" data-brand-img="portfolio-2"/>
+      </div>
+      <div class="project-info reveal delay-1">
+        <span class="eyebrow">Website Development</span>
+        <h2>Squarespace Website Design for<br/><em>Client Name</em></h2>
+        <div class="project-divider"></div>
+        <div class="project-meta">
+          <p><strong>Client:</strong> Client Name</p>
+          <p><strong>Industry:</strong> Beauty &amp; Wellness</p>
+          <p><strong>Services:</strong> Web Design, SEO, Branding</p>
+        </div>
+        <a href="#" class="btn-primary" style="margin-top:20px;">View Live Site</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What We Did -->
+<section class="section project-whatwedid">
+  <div class="container">
+    <div class="project-grid reverse">
+      <div class="project-img reveal">
+        <img src="images/entrepreneur-dark.jpg" alt="What we did" data-brand-img="portfolio-3"/>
+      </div>
+      <div class="project-info reveal delay-1">
+        <span class="eyebrow">The Process</span>
+        <h2>What We <em>Did</em></h2>
+        <p>We designed and developed a fully custom website that captures the brand's essence — clean, professional, and conversion-focused. From the initial moodboard to final deployment, every detail was crafted to reflect the client's unique identity and attract their ideal customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Delivered -->
+<section class="section section--dark project-services-row">
+  <div class="container">
+    <div class="project-svc-grid reveal">
+      <div class="project-svc-item">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <h4>Web Design</h4>
+      </div>
+      <div class="project-svc-item">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <h4>SEO Optimization</h4>
+      </div>
+      <div class="project-svc-item">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <h4>Moodboard Design</h4>
+      </div>
+      <div class="project-svc-item">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <h4>Brand Strategy</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Full Width Image -->
+<section class="project-fullwidth">
+  <img src="images/studio-interior.jpg" alt="Project showcase" class="reveal" data-brand-img="portfolio-4"/>
+</section>
+
+<!-- Results / CTA -->
+<section class="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Want Results Like <em>These?</em></h2>
+      <p>Book a free consultation and let's build something great for your business.</p>
+      <a href="contact.html" class="btn-primary">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+      <img src="prolaunch.png" alt="ProLaunch" class="footer-logo-img pro-logo"/>
+      <img src="GlamLaunch-Logo-white.png" alt="GlamLaunch" class="footer-logo-img glam-logo"/>
+    </a>
+    <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="LinkedIn">LI</a></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 GlamLaunch, a ProLaunch company. All rights reserved.</p></div>
+</footer>
+<script src="js/brand-content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

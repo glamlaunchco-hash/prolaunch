@@ -1,0 +1,365 @@
+/* ============================================================
+   PROLAUNCH — Home Page Styles
+   ============================================================ */
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: -120px;
+  padding-top: 120px;
+}
+.hero-bg {
+  position: absolute;
+  top: -120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-img-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.65) 60%, rgba(10,10,10,0.4) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+.hero h1 {
+  margin-bottom: 20px;
+  animation: heroTextIn 1.4s var(--luxury-ease) 0.3s both;
+}
+
+/* Rotating word animation */
+.rotating-word-wrap {
+  display: inline;
+}
+.rotating-word {
+  display: inline-block;
+  position: relative;
+}
+
+/* GlamLaunch: rotating word in lilac */
+[data-brand="glamlaunch"] .rotating-word {
+  color: var(--lilac);
+}
+
+/* Rotating word — gentle fade in (no slide), white to accent color */
+.rotating-word.is-animating {
+  animation: wordFadeIn 1.2s ease forwards;
+}
+@keyframes wordFadeIn {
+  0%   { opacity: 0; color: #fff; }
+  50%  { opacity: 0.6; color: #fff; }
+  100% { opacity: 1; color: var(--lilac); }
+}
+[data-brand="glamlaunch"] .rotating-word.is-animating {
+  animation: wordFadeInPink 1.2s ease forwards;
+}
+@keyframes wordFadeInPink {
+  0%   { opacity: 0; color: #fff; }
+  50%  { opacity: 0.6; color: #fff; }
+  100% { opacity: 1; color: #E5328F; }
+}
+
+/* "Fast." on ProLaunch — italic lime green with white-to-lime fade */
+.hero-accent-word {
+  color: var(--lime);
+  animation: whiteToLime 2.5s ease forwards;
+}
+.hero-accent-word:empty { display: none; }
+@keyframes whiteToLime {
+  0%   { color: #fff; }
+  100% { color: var(--lime); }
+}
+
+/* GlamLaunch: "Elevate Your" white-to-pink, "Effortlessly." stays white */
+[data-brand="glamlaunch"] .hero h1 > span:first-child {
+  animation: whiteToPinkText 2.5s ease forwards;
+}
+@keyframes whiteToPinkText {
+  0%   { color: #fff; }
+  100% { color: #E5328F; }
+}
+[data-brand="glamlaunch"] .hero-headline-suffix {
+  color: #fff !important;
+}
+[data-brand="glamlaunch"] .hero-accent-word {
+  display: none;
+}
+
+/* ProLaunch: hide the rotating word em when empty */
+.rotating-word:empty { display: none; }
+.rotating-word-wrap:has(.rotating-word:empty) { display: none; }
+.hero-headline-suffix:empty { display: none; }
+.hero-headline-suffix {
+  margin-left: 0.25em;
+  color: var(--lilac);
+}
+.hero .eyebrow {
+  animation: heroTextIn 1.2s var(--luxury-ease) 0.1s both;
+}
+.hero-sub {
+  animation: heroTextIn 1.4s var(--luxury-ease) 0.5s both;
+}
+.hero-ctas {
+  animation: heroTextIn 1.4s var(--luxury-ease) 0.7s both;
+}
+@keyframes heroTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+.hero-sub {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: rgba(255,255,255,0.7);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Hero scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+.hero-scroll span {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+.hero-scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 50%;
+  background: var(--lilac);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0%   { top: -50%; }
+  100% { top: 100%; }
+}
+
+/* ---- Marquee Strip ---- */
+.marquee-strip {
+  padding: 18px 0;
+  background: var(--lime);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+  /* No gap on the flex container — each span carries its own margin
+     so the -50% animation boundary lines up perfectly with the start
+     of the duplicate set (no visible blank gap on loop). */
+}
+.marquee-track span {
+  margin-right: 24px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0A0A0A;
+}
+.marquee-track .dot {
+  color: rgba(10,10,10,0.3);
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---- Services Overview Grid ---- */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.svc-card {
+  background: var(--dark-card);
+  border: 1px solid var(--border-subtle);
+  padding: 36px 28px;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.svc-card:hover {
+  border-color: var(--lilac);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(197,200,243,0.15);
+}
+.svc-icon {
+  color: var(--lime);
+  margin-bottom: 20px;
+}
+.svc-card h4 {
+  margin-bottom: 10px;
+}
+.svc-card p {
+  font-size: 0.88rem;
+}
+
+/* ---- Social Proof / Testimonials ---- */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial-card {
+  background: var(--white);
+  border: 1px solid #e0e0e0;
+  padding: 36px 28px;
+}
+.testimonial-text {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--black);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.testimonial-name {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--black);
+}
+.testimonial-role {
+  font-size: 0.75rem;
+  color: var(--grey-dark);
+}
+
+/* ---- Why ProLaunch ---- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.why-card {
+  padding: 32px 24px;
+  border-left: 2px solid var(--border-subtle);
+}
+.why-card:hover {
+  border-left-color: var(--lime);
+}
+.why-num {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: var(--lime);
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.why-card h4 {
+  margin-bottom: 10px;
+}
+
+/* GlamLaunch marquee — lilac background */
+[data-brand="glamlaunch"] .marquee-strip {
+  background: var(--lilac);
+}
+
+/* GlamLaunch hero overlay — dark black for video visibility */
+[data-brand="glamlaunch"] .hero-overlay {
+  background: linear-gradient(to right, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.65) 60%, rgba(10,10,10,0.4) 100%);
+}
+[data-brand="glamlaunch"] .hero h1,
+[data-brand="glamlaunch"] .hero h1 span {
+  color: #fff;
+}
+[data-brand="glamlaunch"] .hero .eyebrow {
+  color: #fff;
+}
+[data-brand="glamlaunch"] .hero-sub {
+  color: rgba(255,255,255,0.7);
+}
+[data-brand="glamlaunch"] .hero .btn-outline {
+  color: #fff;
+  border-color: rgba(255,255,255,0.3);
+}
+[data-brand="glamlaunch"] .hero .btn-outline:hover {
+  border-color: #E5328F;
+  color: #E5328F;
+}
+
+/* GlamLaunch: testimonials on light bg */
+[data-brand="glamlaunch"] .testimonial-card {
+  background: #fff;
+  border-color: #e8e8e8;
+}
+[data-brand="glamlaunch"] .testimonial-text {
+  color: #1d1d1f;
+}
+[data-brand="glamlaunch"] .testimonial-name {
+  color: #1d1d1f;
+}
+[data-brand="glamlaunch"] .testimonial-role {
+  color: #86868b;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 968px) {
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonial-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .hero-scroll { display: none; }
+}

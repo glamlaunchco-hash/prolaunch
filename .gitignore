@@ -1,0 +1,34 @@
+# macOS noise
+.DS_Store
+**/.DS_Store
+
+# Source / raw assets (not deployed)
+Stock Photos/
+Latest Work/
+3 Girl Boss Stock Photos/
+2x/
+docs/
+*.psd
+*.PSD
+*.ai
+*.AI
+*.sketch
+*.fig
+*.docx
+*.DOCX
+*.pdf
+
+# Project root one-off binaries we don't deploy
+hq8dgw.psd
+glamlaunch-logo-white.png
+
+# Editor / system
+*.log
+*.bak
+*.tmp
+.cache/
+.idea/
+.vscode/
+
+# Stray unreferenced video at root
+1jbfO0pbf0hLltEy68wT7Xn1nI.mp4

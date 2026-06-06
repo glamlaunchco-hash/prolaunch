@@ -1,0 +1,84 @@
+/* ============================================================
+   PROLAUNCH — About Page
+   ============================================================ */
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.about-img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+.about-content h2 {
+  margin-bottom: 20px;
+}
+.about-content p {
+  margin-bottom: 16px;
+}
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.diff-card {
+  background: var(--white);
+  border: 1px solid #e0e0e0;
+  padding: 36px 28px;
+  transition: border-color 0.3s var(--ease);
+}
+.diff-card:hover {
+  border-color: var(--black);
+}
+.diff-num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--black);
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.diff-card h4 {
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.team-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.team-img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.team-info h3 {
+  margin-bottom: 4px;
+}
+.team-role {
+  font-size: 0.8rem;
+  color: var(--lime);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+.team-info p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .about-row { grid-template-columns: 1fr; }
+  .about-img img { height: 300px; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .team-card { grid-template-columns: 1fr; }
+  .team-img img { height: 300px; }
+}
