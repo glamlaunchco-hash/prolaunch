@@ -1290,7 +1290,7 @@ body, .nav, .footer, .section, .svc-card, .btn-primary, .btn-outline,
   body { padding-top: 114px; }
   .nav-links, .nav-right { display: none; }
   .hamburger { display: flex; }
-  .float-book { display: block; }
+  .float-book { display: none !important; }
 
   /* Center hero content on mobile */
   .hero-content { text-align: center; }
